@@ -38,7 +38,7 @@ $ gulp watch
 
 And now, you're ready to go. Just launch **dist/index.html** in any browser, you don't need any local server.
 
-## Generate a pug template with it's own style
+## Generate a component
 
 ```
 $ python create.py <component-name>
@@ -54,27 +54,24 @@ pugjs-sass/
 |
 |-- dist/			* Production folder: HTML & CSS files minified. [Optional] Public files: Images & Fonts.
 |	├── index.html		* HTML Page
-|	├── styles.min.css		* Main stylesheet minified
-|	├── styles.min.css.map		* Source Maps of styles.min.css 
+|	├── styles.min.css	* Main stylesheet minified
+|	├── styles.min.css.map	* Source Maps of styles.min.css 
 |
-|-- src/			* Development folder: SASS/CSS files, JS files & PHP files
-|	├── sass/
-|	|	├── general/
-|	|	├── includes/
-|	|	├── styles.scss
-|	├── views/
-|	|	├── general/
-|	|	├── includes/
-|	|	├── index.pug
+|-- src/			* Development folder
+|	├── sass/               * SASS files
+|	|	├── general/    * General folder: variables, general styles etc...
+|	|	├── includes/   * Stylesheets link to a pug component
+|	|	├── styles.scss * Main stylesheets that import SASS partials
+|	├── views/              * Pug files
+|	|	├── general/    * General folder: head, scripts etc...
+|	|	├── includes/   * Pug component template
+|	|	├── index.pug   * Main page that includes pug components
 |
-├── .gitignore              	* Git Ignore file: bower_components, nodes_modules & vendor
-├── .htaccess.txt           	* Content of .htaccess file to put on Apache Web server. *Rename it to .htaccess*
-├── abovethefold-script.py  	* Python script to build Above the fold content - Use in Gulp script
-├── css-script.py           	* Python script to replace z-index problem when SASS is building - Use in Gulp script
-├── bower.json			* Description file for Bower dependencies
-├── composer.json           	* Description file for Composer dependencies
+├── .gitignore              	* Gitignore file: dist/ & nodes_modules/
+├── create.py           	* Python script to generate a pug and sass files associated
+├── LICENSE          	        * MIT License
 ├── package.json            	* Description file for Node dependencies
-├── gulpfile.js			* Gulp script to build the prod version
+├── gulpfile.js			* Gulp script to build and watch dev files
 ├── README.md			* Documentation file
 ```
 
