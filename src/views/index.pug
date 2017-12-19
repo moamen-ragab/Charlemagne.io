@@ -1,17 +1,12 @@
-html  
-    head
-        title Welcome to pug-scss project
-        link(href='styles.min.css', rel='stylesheet')
+doctype html  
+html
+    include general/head.pug
     body
-        header
-            p Header
-        section
-            p This is a section written in PugJS!
-            a.foo_link(href='#', target='_blank') Link
-            br
-            br
-        footer
-            .copyright Footer
-            script(type='text/javascript').  
-                var myVar = 'Hello world!';
-                console.log(myVar);
+        //- Header
+        include includes/header.pug
+        //- Main Section
+        include includes/section.pug
+        //- Footer
+        include includes/footer.pug
+        //- Script
+        include general/scripts.pug
