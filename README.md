@@ -50,14 +50,14 @@ It will generate a partial sass files in **/src/sass/includes/** and import it d
 
 ```
 pugjs-sass/
-|-- nodes_modules/		* Node dependencies: Gulp & its plugins
+├── nodes_modules/		* Node dependencies: Gulp & its plugins
 |
-|-- dist/			* Production folder: HTML & CSS files minified. [Optional] Public files: Images & Fonts.
+├── dist/			* Production folder: HTML & CSS files minified. [Optional] Public files: Images & Fonts.
 |	├── index.html		* HTML Page
 |	├── styles.min.css	* Main stylesheet minified
 |	├── styles.min.css.map	* Source Maps of styles.min.css 
 |
-|-- src/			* Development folder
+├── src/			* Development folder
 |	├── sass/               * SASS files
 |	|	├── general/    * General folder: variables, general styles etc...
 |	|	├── includes/   * Stylesheets link to a pug component
